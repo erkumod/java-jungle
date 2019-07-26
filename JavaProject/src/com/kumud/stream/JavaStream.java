@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 
 import com.kumud.dto.Student;
 
-public class JavaStreamTest {
+public class JavaStream {
 	
 	public static void main(String [] args) {
-		JavaStreamTest javaStreamTest=new JavaStreamTest();
+		JavaStream javaStream=new JavaStream();
 		
 		Student student_1= new Student("kumud","delhi",1);
 		Student student_2= new Student("raju","delhi",2);
@@ -23,7 +23,7 @@ public class JavaStreamTest {
 		
 		//get student who lives in delhi
 		
-		List<Student> delStudent=javaStreamTest.getDelhiStudents(studentList);
+		List<Student> delStudent=javaStream.getDelhiStudents(studentList);
 		//print name of student which from city delhi
 		delStudent.forEach(st -> System.out.println("name is -- "+st.getName()));
 	
