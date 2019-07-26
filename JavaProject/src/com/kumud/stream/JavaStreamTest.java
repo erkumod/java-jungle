@@ -29,7 +29,7 @@ public class JavaStreamTest {
 	
 	}
 	private List<Student> getDelhiStudents(List<Student> studentList){
-		return studentList.stream().filter(student -> student.getName().equals("delhi")).collect(Collectors.toList());
+		return studentList.stream().filter(student -> student.getCity().equals("delhi")).collect(Collectors.toList());
 	}
 
 }
