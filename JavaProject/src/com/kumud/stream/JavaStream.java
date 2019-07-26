@@ -1,8 +1,8 @@
 package com.kumud.stream;
 
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.stream.Collector;
+
 import java.util.stream.Collectors;
 
 import com.kumud.dto.Student;
@@ -22,12 +22,18 @@ public class JavaStream {
 		List<Student> delStudent=javaStream.getDelhiStudents(studentList);
 		//print name of student which from city delhi
 		delStudent.forEach(st -> System.out.println("name is -- "+st.getName()));
-	
+		
+		//print student name who lives in city delhi
+		List<String> studentFromDelhi=javaStream.getStudentNamesFromDelhi(studentList);
+		studentFromDelhi.forEach(st -> System.out.println("student name is -- "+st));
 	}
 	private List<Student> getDelhiStudents(List<Student> studentList){
 		return studentList.stream().filter(student -> student.getCity().equals("delhi")).collect(Collectors.toList());
 	}
 	
-	
-
+	private List<String> getStudentNamesFromDelhi(List<Student> studentList){
+		// using stream > filter > map > collect = to collect into another list of type 
+		return studentList.stream().filter(student -> student.getCity().equals("delhi")).map(Student :: getName).collect(Collectors.toList());
+	}
+  
 }
