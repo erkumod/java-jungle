@@ -4,7 +4,7 @@ public class JavaThread {
 
 	public static void main(String [] args) {
 		
-		System.out.println("java concurr====ency");
+		System.out.println("java ceeoncurr====ency");
 	}
 	
 	
