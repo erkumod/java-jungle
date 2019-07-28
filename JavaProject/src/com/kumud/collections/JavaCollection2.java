@@ -18,6 +18,7 @@ public class JavaCollection2 {
 		//print
 		
 		studentList.forEach(student -> System.out.println("the name is "+student.getName()));
+		studentList.forEach(student -> student.getName());
 	}
 	
 }
