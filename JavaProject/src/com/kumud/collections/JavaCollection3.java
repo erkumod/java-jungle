@@ -13,7 +13,7 @@ public class JavaCollection3 {
 		DtoFactory dtoFactory = new DtoFactory();
 		List<Student>  studentList= dtoFactory.getStudentList();
 		
-		// 1. Sort
+		// Use () -> {}  If you want multiple expression in lambda function the use {} 
 		Collections.sort(studentList , (st1, st2) -> {System.out.println("kumud");return st1.getName().compareTo(st2.getName()); });
 		
 		//print
